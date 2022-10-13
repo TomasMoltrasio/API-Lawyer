@@ -1,4 +1,7 @@
 const app = require("./app");
+const connectDB = require("./mongo");
+
+connectDB();
 
 async function main() {
   await app.listen(app.get("port"));

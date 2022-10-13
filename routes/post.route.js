@@ -6,12 +6,12 @@ const {
   createPost,
   updatePost,
   deletePost,
-  deleteAll,
-} = require("../services/post.service");
+  deleteAllPosts,
+} = require("../controllers/post.controller");
 
 const router = Router();
 
-router.route("/").get(getPosts).post(createPost).delete(deleteAll);
+router.route("/").get(getPosts).post(createPost).delete(deleteAllPosts);
 
 router.route("/:id").get(getPost).put(updatePost).delete(deletePost);
 
