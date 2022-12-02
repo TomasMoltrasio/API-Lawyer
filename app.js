@@ -13,6 +13,7 @@ app.use(express.json());
 
 // routes
 
-app.use("/api/v1/post", require("./routes/post.route"));
+app.use("/api/v1/post", require("./routes/post.routes"));
+app.use("/api/v1/user", require("./routes/users.routes"));
 
 module.exports = app;
